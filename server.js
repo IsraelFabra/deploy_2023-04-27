@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 app.post('/dato', (req, res) => {
   const dato = req.body.dato;
   // INSERTAR EL DATO EN LA DATABASE
-  const sql = "insert into dato values(default,'" + dato + "');";
+  const sql = "insert into datos values(default,'" + dato + "');";
   console.log(sql);
   db_connection.query(sql, function (err, result) {
     if (err) {
