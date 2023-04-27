@@ -37,6 +37,7 @@ app.post('/dato', (req, res) => {
   console.log(sql);
   db_connection.query(sql, function (err, result) {
     if (err) {
+      console.log(err);
       res.json("Ha ocurrido un error en la inserción del dato");
     } else {
       res.json("Dato insertado en la DB OK!!!");
